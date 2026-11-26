@@ -1,0 +1,2752 @@
+
+ADCBitDepth
+	description  =  "None"
+	type  =  <9: 9>
+	access_mode  =  <4: 4>
+	value  =  Bits12
+	enumentries  =  [Bits12]
+
+AcquisitionBurstFrameCount
+	description  =  "This parameter is ignored if AcquisitionMode is set to SingleFrame. This feature is also constrained by AcquisitionFrameCount if AcquisitionMode is MultiFrame."
+	type  =  <2: 2>
+	access_mode  =  <4: 4>
+	value  =  1
+	min  =  1
+	max  =  256
+	inc  =  1
+	unit  = ""
+
+AcquisitionControl
+	description  =  "Acquisition and trigger control features."
+	type  =  <8: 8>
+	access_mode  =  <3: 3>
+	number of features  =  20
+
+AcquisitionFrameCount
+	description  =  "This node specifies the number of frames to be acquired under MultiFrame AcquisitionMode."
+	type  =  <2: 2>
+	access_mode  =  <4: 4>
+	value  =  1
+	min  =  1
+	max  =  256
+	inc  =  1
+	unit  = ""
+
+AcquisitionFrameRate
+	description  =  "Controls the acquisition rate (in Hertz) at which the frames are captured."
+	type  =  <5: 5>
+	access_mode  =  <3: 3>
+	value  =  30.00030000300003
+	min  =  0.1
+	max  =  30.00030000300003
+	inc  =  None
+	unit  = "Hz"
+
+AcquisitionFrameRateEnable
+	description  =  "Controls if the AcquisitionFrameRate feature is writable and used to control the acquisition rate."
+	type  =  <3: 3>
+	access_mode  =  <4: 4>
+	value  =  False
+
+AcquisitionLineRate
+	description  =  "Controls the rate (in Hertz) at which the Lines in a Frame are captured."
+	type  =  <5: 5>
+	access_mode  =  <3: 3>
+	value  =  119402.98507462686
+	min  =  -1.7976931348623157e+308
+	max  =  1.7976931348623157e+308
+	inc  =  None
+	unit  = "Hz"
+
+AcquisitionMode
+	description  =  "Specifies the acquisition mode of the current device. It helps determine the number of frames to acquire during each acquisition sequence."
+	type  =  <9: 9>
+	access_mode  =  <4: 4>
+	value  =  Continuous
+	enumentries  =  [Continuous, SingleFrame, MultiFrame]
+
+AcquisitionStart
+	description  =  "Start the acquisition sequence for the current device."
+	type  =  <4: 4>
+	access_mode  =  <2: 2>
+
+AcquisitionStop
+	description  =  "Stop the acquisition sequence for the current device."
+	type  =  <4: 4>
+	access_mode  =  <2: 2>
+
+ActionControl
+	description  =  "Category for Action Control features."
+	type  =  <8: 8>
+	access_mode  =  <3: 3>
+	number of features  =  6
+
+ActionDeviceKey
+	description  =  "Provides the device key that allows the device to check the validity of action commands."
+	type  =  <2: 2>
+	access_mode  =  <2: 2>
+	value  =  N/A
+	min  =  0
+	max  =  4294967295
+	inc  =  1
+	unit  = ""
+
+ActionGroupKey
+	description  =  "Provides the key that the device will use to validate the action on reception of the action protocol message."
+	type  =  <2: 2>
+	access_mode  =  <4: 4>
+	value  =  0
+	min  =  0
+	max  =  4294967295
+	inc  =  1
+	unit  = ""
+
+ActionGroupMask
+	description  =  "Provides the mask that the device will use to validate the action on reception of the action protocol message."
+	type  =  <2: 2>
+	access_mode  =  <4: 4>
+	value  =  0
+	min  =  0
+	max  =  4294967295
+	inc  =  1
+	unit  = ""
+
+ActionQueueSize
+	description  =  "Indicates the size of the scheduled action commands queue."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  4
+	min  =  0
+	max  =  4294967295
+	inc  =  1
+	unit  = ""
+
+ActionSelector
+	description  =  "Selects to which Action Signal further Action settings apply."
+	type  =  <2: 2>
+	access_mode  =  <4: 4>
+	value  =  0
+	min  =  0
+	max  =  0
+	inc  =  1
+	unit  = ""
+
+ActionUnconditionalMode
+	description  =  "Enables the unconditional action command mode where action commands are processed even when the primary control channel is closed."
+	type  =  <9: 9>
+	access_mode  =  <4: 4>
+	value  =  Off
+	enumentries  =  [Off, On]
+
+AnalogControl
+	description  =  "Category that contains the Analog control features."
+	type  =  <8: 8>
+	access_mode  =  <3: 3>
+	number of features  =  1
+
+ChunkCRC
+	description  =  "CRC chunk data."
+	type  =  <2: 2>
+	access_mode  =  <1: 1>
+	value  =  N/A
+	min  =  N/A
+	max  =  N/A
+	inc  =  N/A
+	unit  = ""
+
+ChunkDataControl
+	description  =  "Category that contains the Chunk Data control features."
+	type  =  <8: 8>
+	access_mode  =  <3: 3>
+	number of features  =  11
+
+ChunkEnable
+	description  =  "Enables the inclusion of the selected Chunk data in the payload of the image."
+	type  =  <3: 3>
+	access_mode  =  <3: 3>
+	value  =  True
+
+ChunkHeight
+	description  =  "Chunk Height chunk data."
+	type  =  <2: 2>
+	access_mode  =  <1: 1>
+	value  =  N/A
+	min  =  N/A
+	max  =  N/A
+	inc  =  N/A
+	unit  = ""
+
+ChunkModeActive
+	description  =  "Activates the inclusion of Chunk data in the payload of the image."
+	type  =  <3: 3>
+	access_mode  =  <4: 4>
+	value  =  False
+
+ChunkOffsetX
+	description  =  "Chunk Offset X chunk data."
+	type  =  <2: 2>
+	access_mode  =  <1: 1>
+	value  =  N/A
+	min  =  N/A
+	max  =  N/A
+	inc  =  N/A
+	unit  = ""
+
+ChunkOffsetY
+	description  =  "Chunk Offset Y chunk data."
+	type  =  <2: 2>
+	access_mode  =  <1: 1>
+	value  =  N/A
+	min  =  N/A
+	max  =  N/A
+	inc  =  N/A
+	unit  = ""
+
+ChunkPixelDynamicRangeMax
+	description  =  "Chunk Pixel Dynamic Range Max chunk data."
+	type  =  <2: 2>
+	access_mode  =  <1: 1>
+	value  =  N/A
+	min  =  N/A
+	max  =  N/A
+	inc  =  N/A
+	unit  = ""
+
+ChunkPixelDynamicRangeMin
+	description  =  "Chunk Pixel Dynamic Range Min chunk data."
+	type  =  <2: 2>
+	access_mode  =  <1: 1>
+	value  =  N/A
+	min  =  N/A
+	max  =  N/A
+	inc  =  N/A
+	unit  = ""
+
+ChunkPixelFormat
+	description  =  "Chunk Pixel Format chunk data."
+	type  =  <9: 9>
+	access_mode  =  <1: 1>
+	value  =  N/A
+	enumentries  =  N/A
+
+ChunkSelector
+	description  =  "Selects which Chunk to enable or control."
+	type  =  <9: 9>
+	access_mode  =  <4: 4>
+	value  =  Image
+	enumentries  =  [Image, CRC, PixelFormat, Width, Height, OffsetX, OffsetY, PixelDynamicRangeMin, PixelDynamicRangeMax]
+
+ChunkWidth
+	description  =  "Chunk Width chunk data."
+	type  =  <2: 2>
+	access_mode  =  <1: 1>
+	value  =  N/A
+	min  =  N/A
+	max  =  N/A
+	inc  =  N/A
+	unit  = ""
+
+ConversionGain
+	description  =  "Sets the conversion gain mode."
+	type  =  <9: 9>
+	access_mode  =  <4: 4>
+	value  =  High
+	enumentries  =  [Low, High]
+
+CounterAndTimerControl
+	description  =  "Contains the Counter and Timer control features."
+	type  =  <8: 8>
+	access_mode  =  <0: 0>
+	number of features  =  20
+
+CounterDuration
+	description  =  "Sets the duration (or number of events) before the Counter End event is generated."
+	type  =  <2: 2>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	min  =  N/A
+	max  =  N/A
+	inc  =  N/A
+	unit  = ""
+
+CounterEventActivation
+	description  =  "Selects the Activation mode Event Source signal."
+	type  =  <9: 9>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	enumentries  =  N/A
+
+CounterEventSource
+	description  =  "Select the events that will be the source to increment the Counter."
+	type  =  <9: 9>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	enumentries  =  N/A
+
+CounterReset
+	description  =  "Does a software reset of the selected Counter and starts it."
+	type  =  <4: 4>
+	access_mode  =  <0: 0>
+
+CounterResetActivation
+	description  =  "Selects the Activation mode of the Counter Reset Source signal."
+	type  =  <9: 9>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	enumentries  =  N/A
+
+CounterResetSource
+	description  =  "Select the signals that will be the source to reset the Counter."
+	type  =  <9: 9>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	enumentries  =  N/A
+
+CounterSelector
+	description  =  "Selects which Counter to configure."
+	type  =  <9: 9>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	enumentries  =  N/A
+
+CounterStatus
+	description  =  "Returns the current status of the Counter."
+	type  =  <9: 9>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	enumentries  =  N/A
+
+CounterTriggerActivation
+	description  =  "Selects the Activation mode of the trigger to start the Counter."
+	type  =  <9: 9>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	enumentries  =  N/A
+
+CounterTriggerSource
+	description  =  "Selects the source to start the Counter."
+	type  =  <9: 9>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	enumentries  =  N/A
+
+CounterValue
+	description  =  "Reads or writes the current value of the selected Counter."
+	type  =  <2: 2>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	min  =  N/A
+	max  =  N/A
+	inc  =  N/A
+	unit  = ""
+
+CounterValueAtReset
+	description  =  "Reads value of the selected Counter when it was reset by a trigger or by an explicit CounterReset command."
+	type  =  <2: 2>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	min  =  N/A
+	max  =  N/A
+	inc  =  N/A
+	unit  = ""
+
+DeviceCharacterSet
+	description  =  "Character set used by all the strings of the device."
+	type  =  <9: 9>
+	access_mode  =  <3: 3>
+	value  =  UTF8
+	enumentries  =  [UTF8, ASCII]
+
+DeviceClockFrequency
+	description  =  "Returns the frequency of the selected Clock."
+	type  =  <5: 5>
+	access_mode  =  <3: 3>
+	value  =  8000000.0
+	min  =  -1.7976931348623157e+308
+	max  =  1.7976931348623157e+308
+	inc  =  None
+	unit  = "Hz"
+
+DeviceClockSelector
+	description  =  "Selects the clock frequency to access from the device."
+	type  =  <9: 9>
+	access_mode  =  <4: 4>
+	value  =  Sensor
+	enumentries  =  [Sensor]
+
+DeviceControl
+	description  =  "Device Information and configuration."
+	type  =  <8: 8>
+	access_mode  =  <3: 3>
+	number of features  =  64
+
+DeviceEventChannelCount
+	description  =  "Indicates the number of event channels supported by the device."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  1
+	min  =  0
+	max  =  1
+	inc  =  1
+	unit  = ""
+
+DeviceFactoryReset
+	description  =  "Resets device to factory defaults."
+	type  =  <4: 4>
+	access_mode  =  <2: 2>
+
+DeviceFamilyName
+	description  =  "Identifier of the product family of the device."
+	type  =  <6: 6>
+	access_mode  =  <3: 3>
+	value  =  "Helios"
+
+DeviceFeaturePersistenceEnd
+	description  =  "Indicate to the device the end of feature persistence."
+	type  =  <4: 4>
+	access_mode  =  <2: 2>
+
+DeviceFeaturePersistenceStart
+	description  =  "Indicate to the device and GenICam XML to get ready for persisting of all streamable features."
+	type  =  <4: 4>
+	access_mode  =  <2: 2>
+
+DeviceFirmwareVersion
+	description  =  "Version of the firmware in the device."
+	type  =  <6: 6>
+	access_mode  =  <3: 3>
+	value  =  "1.17.0.0"
+
+DeviceIndicatorMode
+	description  =  "Controls the behavior of the indicator LED showing the status of the Device."
+	type  =  <9: 9>
+	access_mode  =  <4: 4>
+	value  =  Active
+	enumentries  =  [Inactive, Active]
+
+DeviceLinkCommandTimeout
+	description  =  "Indicates the command timeout of the specified Link in microseconds."
+	type  =  <5: 5>
+	access_mode  =  <3: 3>
+	value  =  1500000.0
+	min  =  0.0
+	max  =  1.7976931348623157e+308
+	inc  =  None
+	unit  = "us"
+
+DeviceLinkHeartbeatMode
+	description  =  "Activate or deactivate the selected Link's heartbeat."
+	type  =  <9: 9>
+	access_mode  =  <3: 3>
+	value  =  On
+	enumentries  =  [On, Off]
+
+DeviceLinkHeartbeatTimeout
+	description  =  "Controls the current heartbeat timeout of the specific Link in microseconds."
+	type  =  <5: 5>
+	access_mode  =  <4: 4>
+	value  =  6000000.0
+	min  =  500000.0
+	max  =  4294967295000.0
+	inc  =  None
+	unit  = "us"
+
+DeviceLinkSelector
+	description  =  "Selects which Link of the device to control. In general, the device only has one link."
+	type  =  <2: 2>
+	access_mode  =  <4: 4>
+	value  =  0
+	min  =  0
+	max  =  0
+	inc  =  1
+	unit  = ""
+
+DeviceLinkSpeed
+	description  =  "Indicates the speed of transmission negotiated on the specified Link selected by DeviceLinkSelector."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  125000000
+	min  =  -9223372036854775808
+	max  =  9223372036854775807
+	inc  =  1
+	unit  = "Bps"
+
+DeviceLinkThroughputLimit
+	description  =  "Limits the maximum bandwidth of the data that will be streamed out by the device on the selected Link."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  125000000
+	min  =  31250000
+	max  =  125000000
+	inc  =  1
+	unit  = "Bps"
+
+DeviceLinkThroughputLimitMode
+	description  =  "Controls if the DeviceLinkThroughputLimit is active."
+	type  =  <9: 9>
+	access_mode  =  <4: 4>
+	value  =  Off
+	enumentries  =  [Off, On]
+
+DeviceLinkThroughputReserve
+	description  =  "Allocates the maximum percentage of bandwidth reserved for re-transmissions."
+	type  =  <2: 2>
+	access_mode  =  <4: 4>
+	value  =  10
+	min  =  0
+	max  =  30
+	inc  =  1
+	unit  = "%"
+
+DeviceManifestEntrySelector
+	description  =  "Manifest entry selector."
+	type  =  <2: 2>
+	access_mode  =  <4: 4>
+	value  =  1
+	min  =  1
+	max  =  63
+	inc  =  1
+	unit  = ""
+
+DeviceManifestPrimaryURL
+	description  =  "Indicates the first URL to the GenICam XML device description file of the selected manifest entry."
+	type  =  <6: 6>
+	access_mode  =  <3: 3>
+	value  =  "Local:Lucid Vision Labs_HLS003S-001_rev1_0_d2a99d8bc90f1747a175872c55360a7f.zip;800c9d28;b72e"
+
+DeviceManifestSchemaMajorVersion
+	description  =  "Indicates the major version number of the schema file of the selected manifest entry."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  1
+	min  =  0
+	max  =  63
+	inc  =  1
+	unit  = ""
+
+DeviceManifestSchemaMinorVersion
+	description  =  "Indicates the minor version number of the schema file of the selected manifest entry."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  1
+	min  =  0
+	max  =  63
+	inc  =  1
+	unit  = ""
+
+DeviceManifestSecondaryURL
+	description  =  "Indicates the second URL to the GenICam XML device description file of the selected manifest entry."
+	type  =  <6: 6>
+	access_mode  =  <3: 3>
+	value  =  "http://www.thinklucid.com/gev/Lucid Vision Labs_HLS003S-001_rev1_0_d2a99d8bc90f1747a175872c55360a7f.zip"
+
+DeviceManifestXMLMajorVersion
+	description  =  "Indicates the major version number of the GenICam XML file of the selected manifest entry."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  1
+	min  =  0
+	max  =  63
+	inc  =  1
+	unit  = ""
+
+DeviceManifestXMLMinorVersion
+	description  =  "Indicates the minor version number of the GenICam XML file of the selected manifest entry."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  0
+	min  =  0
+	max  =  63
+	inc  =  1
+	unit  = ""
+
+DeviceManifestXMLSubMinorVersion
+	description  =  "Indicates the sub minor version number of the GenICam XML file of the selected manifest entry."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  0
+	min  =  0
+	max  =  63
+	inc  =  1
+	unit  = ""
+
+DeviceManufacturerInfo
+	description  =  "Provides additional information from the vendor about the device."
+	type  =  <6: 6>
+	access_mode  =  <3: 3>
+	value  =  "Lucid Vision Labs (www.thinklucid.com)"
+
+DeviceMaxThroughput
+	description  =  "Maximum bandwidth of the data that can be streamed out of the device."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  151926400
+	min  =  0
+	max  =  4294967295
+	inc  =  1
+	unit  = "Bps"
+
+DeviceModelName
+	description  =  "Model of the device."
+	type  =  <6: 6>
+	access_mode  =  <3: 3>
+	value  =  "HLS003S-001"
+
+DevicePower
+	description  =  "Device power in Watts."
+	type  =  <5: 5>
+	access_mode  =  <3: 3>
+	value  =  4.7025
+	min  =  0.0
+	max  =  1.7976931348623157e+308
+	inc  =  None
+	unit  = "W"
+
+DevicePressure
+	description  =  "The internal device pressure in kilopascals."
+	type  =  <5: 5>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	min  =  N/A
+	max  =  N/A
+	inc  =  None
+	unit  = "kPa"
+
+DeviceRegistersStreamingEnd
+	description  =  "Announce the end of registers streaming."
+	type  =  <4: 4>
+	access_mode  =  <2: 2>
+
+DeviceRegistersStreamingStart
+	description  =  "Prepare the device for registers streaming without checking for consistency."
+	type  =  <4: 4>
+	access_mode  =  <2: 2>
+
+DeviceReset
+	description  =  "Resets the device to its power up state."
+	type  =  <4: 4>
+	access_mode  =  <2: 2>
+
+DeviceSFNCVersionMajor
+	description  =  "Major version of the Standard Features Naming Convention (SFNC) that was used to create the device's GenICam XML."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  2
+	min  =  -9223372036854775808
+	max  =  9223372036854775807
+	inc  =  1
+	unit  = ""
+
+DeviceSFNCVersionMinor
+	description  =  "Minor version of the Standard Features Naming Convention (SFNC) that was used to create the device's GenICam XML."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  3
+	min  =  -9223372036854775808
+	max  =  9223372036854775807
+	inc  =  1
+	unit  = ""
+
+DeviceSFNCVersionSubMinor
+	description  =  "Sub minor version of the Standard Features Naming Convention (SFNC) that was used to create the device's GenICam XML."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  0
+	min  =  -9223372036854775808
+	max  =  9223372036854775807
+	inc  =  1
+	unit  = ""
+
+DeviceScanType
+	description  =  "Scan type of the sensor of the device."
+	type  =  <9: 9>
+	access_mode  =  <3: 3>
+	value  =  Areascan3D
+	enumentries  =  [Areascan, Linescan, Areascan3D, Linescan3D]
+
+DeviceSerialNumber
+	description  =  "Device's unique serial number."
+	type  =  <6: 6>
+	access_mode  =  <3: 3>
+	value  =  "200100069"
+
+DeviceStreamChannelCount
+	description  =  "Indicates the number of stream channels supported by the device."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  1
+	min  =  0
+	max  =  512
+	inc  =  1
+	unit  = ""
+
+DeviceStreamChannelEndianness
+	description  =  "Endianness of multi-byte pixel data for this stream."
+	type  =  <9: 9>
+	access_mode  =  <3: 3>
+	value  =  Little
+	enumentries  =  [Little, Big]
+
+DeviceStreamChannelPacketSize
+	description  =  "Specifies the stream packet size, in bytes, to send on the selected channel for the device."
+	type  =  <2: 2>
+	access_mode  =  <4: 4>
+	value  =  1500
+	min  =  576
+	max  =  9000
+	inc  =  1
+	unit  = "B"
+
+DeviceStreamChannelSelector
+	description  =  "Selects the stream channel to control."
+	type  =  <2: 2>
+	access_mode  =  <4: 4>
+	value  =  0
+	min  =  0
+	max  =  0
+	inc  =  1
+	unit  = ""
+
+DeviceStreamChannelType
+	description  =  "Reports the type of the stream channel."
+	type  =  <9: 9>
+	access_mode  =  <3: 3>
+	value  =  Transmitter
+	enumentries  =  [Transmitter, Receiver]
+
+DeviceTLType
+	description  =  "Transport Layer type of the device."
+	type  =  <9: 9>
+	access_mode  =  <3: 3>
+	value  =  GigEVision
+	enumentries  =  [GigEVision, CameraLink, CameraLinkHS, CoaXPress, USB3Vision]
+
+DeviceTLVersionMajor
+	description  =  "Major version of the Transport Layer of the device."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  2
+	min  =  -9223372036854775808
+	max  =  9223372036854775807
+	inc  =  1
+	unit  = ""
+
+DeviceTLVersionMinor
+	description  =  "Minor version of the Transport Layer of the device."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  0
+	min  =  -9223372036854775808
+	max  =  9223372036854775807
+	inc  =  1
+	unit  = ""
+
+DeviceTLVersionSubMinor
+	description  =  "Sub minor version of the Transport Layer of the device."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  3
+	min  =  -9223372036854775808
+	max  =  9223372036854775807
+	inc  =  1
+	unit  = ""
+
+DeviceTemperature
+	description  =  "Device temperature in degrees Celsius."
+	type  =  <5: 5>
+	access_mode  =  <3: 3>
+	value  =  39.0
+	min  =  -50.0
+	max  =  150.0
+	inc  =  None
+	unit  = "C"
+
+DeviceTemperatureSelector
+	description  =  "Selects the temperature sensor to read from."
+	type  =  <9: 9>
+	access_mode  =  <4: 4>
+	value  =  Sensor
+	enumentries  =  [Sensor]
+
+DeviceType
+	description  =  "Returns the device type."
+	type  =  <9: 9>
+	access_mode  =  <3: 3>
+	value  =  Transmitter
+	enumentries  =  [Transmitter, Receiver, Transceiver, Peripheral]
+
+DeviceUpTime
+	description  =  "Time the device has been powered in seconds."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  21180
+	min  =  0
+	max  =  4294967295
+	inc  =  1
+	unit  = "s"
+
+DeviceUserID
+	description  =  "A device ID string that is user-programmable."
+	type  =  <6: 6>
+	access_mode  =  <4: 4>
+	value  =  ""
+
+DeviceVendorName
+	description  =  "Name of the manufacturer of the device."
+	type  =  <6: 6>
+	access_mode  =  <3: 3>
+	value  =  "Lucid Vision Labs"
+
+DeviceVersion
+	description  =  "Version of the device."
+	type  =  <6: 6>
+	access_mode  =  <3: 3>
+	value  =  "3LLR8"
+
+DigitalIOControl
+	description  =  "Digital IO control features."
+	type  =  <8: 8>
+	access_mode  =  <3: 3>
+	number of features  =  14
+
+EventControl
+	description  =  "Event control features."
+	type  =  <8: 8>
+	access_mode  =  <3: 3>
+	number of features  =  6
+
+EventDestinationAddress
+	description  =  "Controls the destination IP address for events."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  0
+	min  =  0
+	max  =  4294967295
+	inc  =  1
+	unit  = ""
+
+EventExposureEnd
+	description  =  "Returns the unique identifier of the ExposureEnd type of Event."
+	type  =  <2: 2>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	min  =  N/A
+	max  =  N/A
+	inc  =  N/A
+	unit  = ""
+
+EventExposureEndData
+	description  =  "Category that contains all the data features related to the ExposureEnd Event."
+	type  =  <8: 8>
+	access_mode  =  <0: 0>
+	number of features  =  3
+
+EventExposureEndFrameID
+	description  =  "Returns the unique Identifier of the Frame (or image) that generated the ExposureEnd Event."
+	type  =  <2: 2>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	min  =  N/A
+	max  =  N/A
+	inc  =  N/A
+	unit  = ""
+
+EventExposureEndTimestamp
+	description  =  "Returns the Timestamp of the ExposureEnd Event."
+	type  =  <2: 2>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	min  =  N/A
+	max  =  N/A
+	inc  =  N/A
+	unit  = ""
+
+EventExposureStart
+	description  =  "Returns the unique identifier of the ExposureStart type of Event."
+	type  =  <2: 2>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	min  =  N/A
+	max  =  N/A
+	inc  =  N/A
+	unit  = ""
+
+EventExposureStartData
+	description  =  "Category that contains all the data features related to the ExposureStart Event."
+	type  =  <8: 8>
+	access_mode  =  <0: 0>
+	number of features  =  3
+
+EventExposureStartFrameID
+	description  =  "Returns the unique Identifier of the Frame (or image) that generated the ExposureStart Event."
+	type  =  <2: 2>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	min  =  N/A
+	max  =  N/A
+	inc  =  N/A
+	unit  = ""
+
+EventExposureStartTimestamp
+	description  =  "Returns the Timestamp of the ExposureStart Event."
+	type  =  <2: 2>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	min  =  N/A
+	max  =  N/A
+	inc  =  N/A
+	unit  = ""
+
+EventNotification
+	description  =  "Activate or deactivate the notification to the host application of the occurrence of the selected Event."
+	type  =  <9: 9>
+	access_mode  =  <3: 3>
+	value  =  Off
+	enumentries  =  [Off, On]
+
+EventSelector
+	description  =  "Selects which Event to signal to the host application."
+	type  =  <9: 9>
+	access_mode  =  <4: 4>
+	value  =  Test
+	enumentries  =  [Test]
+
+EventTest
+	description  =  "Returns the unique identifier of the Event Test type of event generated using the TestEventGenerate command."
+	type  =  <2: 2>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	min  =  N/A
+	max  =  N/A
+	inc  =  N/A
+	unit  = ""
+
+EventTestData
+	description  =  "Category that contains all the data features related to the Event Test generated using the TestEventGenerate command."
+	type  =  <8: 8>
+	access_mode  =  <0: 0>
+	number of features  =  2
+
+EventTestTimestamp
+	description  =  "Returns the Timestamp of the Event Test event."
+	type  =  <2: 2>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	min  =  N/A
+	max  =  N/A
+	inc  =  N/A
+	unit  = ""
+
+ExposureTime
+	description  =  "Returns the exposure time for all phases in microseconds."
+	type  =  <5: 5>
+	access_mode  =  <3: 3>
+	value  =  248.683
+	min  =  0.25
+	max  =  1000.0
+	inc  =  None
+	unit  = "us"
+
+ExposureTimeSelector
+	description  =  "Selects the exposure time."
+	type  =  <9: 9>
+	access_mode  =  <4: 4>
+	value  =  Exp250Us
+	enumentries  =  [Exp1000Us, Exp250Us]
+
+FileAccessBuffer
+	description  =  "Defines the intermediate access buffer that allows the exchange of data between the device file storage and the application."
+	type  =  <7: 7>
+	access_mode  =  <4: 4>
+
+FileAccessControl
+	description  =  "File access control features."
+	type  =  <8: 8>
+	access_mode  =  <3: 3>
+	number of features  =  13
+
+FileAccessLength
+	description  =  "Controls the length of the mapping between the device file storage and the FileAccessBuffer."
+	type  =  <2: 2>
+	access_mode  =  <1: 1>
+	value  =  N/A
+	min  =  N/A
+	max  =  N/A
+	inc  =  N/A
+	unit  = "B"
+
+FileAccessOffset
+	description  =  "Controls the offset of the mapping between the device file storage and the FileAccessBuffer."
+	type  =  <2: 2>
+	access_mode  =  <1: 1>
+	value  =  N/A
+	min  =  N/A
+	max  =  N/A
+	inc  =  N/A
+	unit  = "B"
+
+FileOpenMode
+	description  =  "Selects the access mode in which a file is opened in the device."
+	type  =  <9: 9>
+	access_mode  =  <4: 4>
+	value  =  Read
+	enumentries  =  [Read]
+
+FileOperationExecute
+	description  =  "Executes the operation selected by FileOperationSelector on the selected file."
+	type  =  <4: 4>
+	access_mode  =  <2: 2>
+
+FileOperationResult
+	description  =  "Represents the file operation result. For Read or Write operations, the number of successfully read/written bytes is returned."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  0
+	min  =  0
+	max  =  4294967295
+	inc  =  1
+	unit  = ""
+
+FileOperationSelector
+	description  =  "Selects the target operation for the selected file in the device. This operation is executed when the FileOperationExecute feature is called."
+	type  =  <9: 9>
+	access_mode  =  <4: 4>
+	value  =  Open
+	enumentries  =  [Open]
+
+FileOperationStatus
+	description  =  "Represents the FileOperationExecute status."
+	type  =  <9: 9>
+	access_mode  =  <3: 3>
+	value  =  None
+	enumentries  =  [Success, Failure, None]
+
+FileSelector
+	description  =  "Selects the target file in the device."
+	type  =  <9: 9>
+	access_mode  =  <4: 4>
+	value  =  UserSetDefault
+	enumentries  =  [UserSetDefault, UserSet1, UserSet2, UserFile1, Firmware]
+
+FileSize
+	description  =  "Represents the size of the selected file in bytes."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  6848
+	min  =  0
+	max  =  4294967295
+	inc  =  1
+	unit  = "B"
+
+FileStorageFreeSize
+	description  =  "Represents the free size of the file storage selected by FileSelector in bytes."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  10887168
+	min  =  0
+	max  =  4294967295
+	inc  =  1
+	unit  = "B"
+
+FileStorageSize
+	description  =  "Represents the total size of the file storage selected by FileSelector in bytes."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  16580608
+	min  =  0
+	max  =  4294967295
+	inc  =  1
+	unit  = "B"
+
+FileStorageUsedSize
+	description  =  "Represents the used size of the file storage selected by FileSelector in bytes."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  5685248
+	min  =  0
+	max  =  4294967295
+	inc  =  1
+	unit  = "B"
+
+FirmwareUpdate
+	description  =  "Starts a firmware update."
+	type  =  <4: 4>
+	access_mode  =  <2: 2>
+
+GevCCP
+	description  =  "Controls the device access privilege of an application."
+	type  =  <9: 9>
+	access_mode  =  <3: 3>
+	value  =  ControlAccessSwitchoverActive
+	enumentries  =  [OpenAccess, ExclusiveAccess, ControlAccess, ControlAccessSwitchoverActive]
+
+GevCurrentDefaultGateway
+	description  =  "Reports the default gateway IP address to be used on the given logical link."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  2887415809
+	min  =  0
+	max  =  4294967295
+	inc  =  1
+	unit  = ""
+
+GevCurrentIPAddress
+	description  =  "Reports the IP address for the given logical link."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  2887416005
+	min  =  0
+	max  =  4294967295
+	inc  =  1
+	unit  = ""
+
+GevCurrentIPConfigurationDHCP
+	description  =  "Controls whether the DHCP IP configuration scheme is activated on the given logical link."
+	type  =  <3: 3>
+	access_mode  =  <4: 4>
+	value  =  True
+
+GevCurrentIPConfigurationLLA
+	description  =  "Controls whether the Link Local Address IP configuration scheme is activated on the given logical link."
+	type  =  <3: 3>
+	access_mode  =  <3: 3>
+	value  =  True
+
+GevCurrentIPConfigurationPersistentIP
+	description  =  "Controls whether the Persistent IP configuration scheme is activated on the given logical link."
+	type  =  <3: 3>
+	access_mode  =  <4: 4>
+	value  =  False
+
+GevCurrentPhysicalLinkConfiguration
+	description  =  "Indicates the current physical link configuration of the device."
+	type  =  <9: 9>
+	access_mode  =  <3: 3>
+	value  =  SingleLink
+	enumentries  =  [SingleLink, MultiLink, StaticLAG, DynamicLAG]
+
+GevCurrentSubnetMask
+	description  =  "Reports the subnet mask of the given logical link."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  4294967040
+	min  =  0
+	max  =  4294967295
+	inc  =  1
+	unit  = ""
+
+GevDiscoveryAckDelay
+	description  =  "Indicates the maximum randomized delay the device will wait to acknowledge a discovery command."
+	type  =  <2: 2>
+	access_mode  =  <4: 4>
+	value  =  20
+	min  =  0
+	max  =  999
+	inc  =  1
+	unit  = "ms"
+
+GevGVCPExtendedStatusCodes
+	description  =  "Enables the generation of extended status codes."
+	type  =  <3: 3>
+	access_mode  =  <0: 0>
+	value  =  N/A
+
+GevGVCPExtendedStatusCodesSelector
+	description  =  "Selects the GigE Vision version to control extended status codes for."
+	type  =  <9: 9>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	enumentries  =  N/A
+
+GevGVCPPendingAck
+	description  =  "Enables the generation of PENDING_ACK."
+	type  =  <3: 3>
+	access_mode  =  <4: 4>
+	value  =  True
+
+GevGVSPExtendedIDMode
+	description  =  "Enables the extended IDs mode."
+	type  =  <9: 9>
+	access_mode  =  <4: 4>
+	value  =  On
+	enumentries  =  [Off, On]
+
+GevIPConfigurationStatus
+	description  =  "Reports the current IP configuration status."
+	type  =  <9: 9>
+	access_mode  =  <3: 3>
+	value  =  DHCP
+	enumentries  =  [None, PersistentIP, DHCP, LLA, ForceIP]
+
+GevInterfaceSelector
+	description  =  "Selects which logical link to control."
+	type  =  <2: 2>
+	access_mode  =  <4: 4>
+	value  =  0
+	min  =  0
+	max  =  0
+	inc  =  1
+	unit  = ""
+
+GevMACAddress
+	description  =  "MAC address of the logical link."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  30853702281768
+	min  =  -9223372036854775808
+	max  =  9223372036854775807
+	inc  =  1
+	unit  = ""
+
+GevMCDA
+	description  =  "Controls the destination IP address for the message channel."
+	type  =  <2: 2>
+	access_mode  =  <4: 4>
+	value  =  0
+	min  =  0
+	max  =  4294967295
+	inc  =  1
+	unit  = ""
+
+GevMCPHostPort
+	description  =  "Controls the port to which the device must send messages."
+	type  =  <2: 2>
+	access_mode  =  <4: 4>
+	value  =  0
+	min  =  0
+	max  =  4294967295
+	inc  =  1
+	unit  = ""
+
+GevMCRC
+	description  =  "Controls the number of retransmissions allowed when a message channel message times out."
+	type  =  <2: 2>
+	access_mode  =  <4: 4>
+	value  =  0
+	min  =  0
+	max  =  0
+	inc  =  1
+	unit  = ""
+
+GevMCSP
+	description  =  "This features indicates the source port for the message channel."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  49153
+	min  =  0
+	max  =  4294967295
+	inc  =  1
+	unit  = ""
+
+GevMCTT
+	description  =  "Provides the transmission timeout value."
+	type  =  <2: 2>
+	access_mode  =  <4: 4>
+	value  =  0
+	min  =  0
+	max  =  0
+	inc  =  1
+	unit  = "ms"
+
+GevPAUSEFrameReception
+	description  =  "Controls whether incoming PAUSE Frames are handled on the given logical link."
+	type  =  <3: 3>
+	access_mode  =  <0: 0>
+	value  =  N/A
+
+GevPAUSEFrameTransmission
+	description  =  "Controls whether PAUSE Frames can be generated on the given logical link."
+	type  =  <3: 3>
+	access_mode  =  <0: 0>
+	value  =  N/A
+
+GevPersistentDefaultGateway
+	description  =  "Controls the persistent default gateway for this logical link."
+	type  =  <2: 2>
+	access_mode  =  <4: 4>
+	value  =  0
+	min  =  0
+	max  =  4294967295
+	inc  =  1
+	unit  = ""
+
+GevPersistentIPAddress
+	description  =  "Controls the Persistent IP address for this logical link."
+	type  =  <2: 2>
+	access_mode  =  <4: 4>
+	value  =  0
+	min  =  0
+	max  =  4294967295
+	inc  =  1
+	unit  = ""
+
+GevPersistentSubnetMask
+	description  =  "Controls the persistent subnet mask associated with the Persistent IP address on this logical link."
+	type  =  <2: 2>
+	access_mode  =  <4: 4>
+	value  =  0
+	min  =  0
+	max  =  4294967295
+	inc  =  1
+	unit  = ""
+
+GevPhysicalLinkConfiguration
+	description  =  "Controls the principal physical link configuration to use on next restart/power-up of the device."
+	type  =  <9: 9>
+	access_mode  =  <4: 4>
+	value  =  SingleLink
+	enumentries  =  [SingleLink]
+
+GevPrimaryApplicationIPAddress
+	description  =  "Returns the address of the primary application."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  2887415901
+	min  =  0
+	max  =  4294967295
+	inc  =  1
+	unit  = ""
+
+GevPrimaryApplicationSocket
+	description  =  "Returns the UDP source port of the primary application."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  62475
+	min  =  0
+	max  =  4294967295
+	inc  =  1
+	unit  = ""
+
+GevPrimaryApplicationSwitchoverKey
+	description  =  "Controls the key to use to authenticate primary application switchover requests."
+	type  =  <2: 2>
+	access_mode  =  <2: 2>
+	value  =  N/A
+	min  =  0
+	max  =  4294967295
+	inc  =  1
+	unit  = ""
+
+GevSCDA
+	description  =  "Controls the destination IP address of the selected stream channel to which a GVSP transmitter must send data stream or the destination IP address from which a GVSP receiver may receive data stream."
+	type  =  <2: 2>
+	access_mode  =  <4: 4>
+	value  =  2887415901
+	min  =  0
+	max  =  4294967295
+	inc  =  1
+	unit  = ""
+
+GevSCFTD
+	description  =  "Indicates the transmission delay before transmission occurs."
+	type  =  <2: 2>
+	access_mode  =  <4: 4>
+	value  =  0
+	min  =  0
+	max  =  4000000000
+	inc  =  5000000
+	unit  = ""
+
+GevSCPD
+	description  =  "Controls the delay (in GEV timestamp counter unit) to insert between each packet for this stream channel."
+	type  =  <2: 2>
+	access_mode  =  <4: 4>
+	value  =  80
+	min  =  0
+	max  =  5341600
+	inc  =  1
+	unit  = ""
+
+GevSCPHostPort
+	description  =  "Controls the port of the selected channel to which a GVSP transmitter must send data stream or the port from which a GVSP receiver may receive data stream."
+	type  =  <2: 2>
+	access_mode  =  <4: 4>
+	value  =  0
+	min  =  0
+	max  =  65535
+	inc  =  1
+	unit  = ""
+
+GevSCPInterfaceIndex
+	description  =  "Index of the logical link to use."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  0
+	min  =  0
+	max  =  3
+	inc  =  1
+	unit  = ""
+
+GevSCPSDoNotFragment
+	description  =  "The state of this feature is copied into the 'do not fragment' bit of IP header of each stream packet."
+	type  =  <3: 3>
+	access_mode  =  <4: 4>
+	value  =  True
+
+GevSCPSFireTestPacket
+	description  =  "Sends a test packet. When this feature is set, the device will fire one test packet."
+	type  =  <3: 3>
+	access_mode  =  <3: 3>
+	value  =  False
+
+GevSCPSPacketSize
+	description  =  "It specifies the stream packet size, in bytes, to send on the selected channel for a GVSP transmitter or specifies the maximum packet size supported by a GVSP receiver."
+	type  =  <2: 2>
+	access_mode  =  <4: 4>
+	value  =  1500
+	min  =  576
+	max  =  9000
+	inc  =  1
+	unit  = "B"
+
+GevSCSP
+	description  =  "Indicates the source port of the stream channel."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  49154
+	min  =  0
+	max  =  4294967295
+	inc  =  1
+	unit  = ""
+
+GevStreamChannelSelector
+	description  =  "Selects the stream channel to control."
+	type  =  <2: 2>
+	access_mode  =  <4: 4>
+	value  =  0
+	min  =  0
+	max  =  0
+	inc  =  1
+	unit  = ""
+
+GevSupportedOption
+	description  =  "Returns if the selected GEV option is supported."
+	type  =  <3: 3>
+	access_mode  =  <3: 3>
+	value  =  True
+
+GevSupportedOptionSelector
+	description  =  "Selects the GEV option to interrogate for existing support."
+	type  =  <9: 9>
+	access_mode  =  <4: 4>
+	value  =  SingleLink
+	enumentries  =  [SingleLink, MultiLink, StaticLAG, DynamicLAG, PAUSEFrameReception, PAUSEFrameGeneration, IPConfigurationLLA, IPConfigurationDHCP, IPConfigurationPersistentIP, StreamChannelSourceSocket, StandardIDMode, MessageChannelSourceSocket, CommandsConcatenation, WriteMem, PacketResend, Event, EventData, PendingAck, Ptp, Action, UnconditionalAction, ScheduledAction, PrimaryApplicationSwitchover, ExtendedStatusCodes, ExtendedStatusCodesVersion2_0, DiscoveryAckDelay, DiscoveryAckDelayWritable, TestData, ManifestTable, CCPApplicationSocket, LinkSpeed, HeartbeatDisable, SerialNumber, UserDefinedName, StreamChannel0BigAndLittleEndian, StreamChannel0IPReassembly, StreamChannel0MultiZone, StreamChannel0PacketResendDestination, StreamChannel0AllInTransmission, StreamChannel0UnconditionalStreaming, StreamChannel0ExtendedChunkData]
+
+GigEVision
+	description  =  "Category that contains the features pertaining to the GigE Vision transport layer of the device."
+	type  =  <8: 8>
+	access_mode  =  <3: 3>
+	number of features  =  42
+
+Height
+	description  =  "Height of the image provided by the device in pixels."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  480
+	min  =  8
+	max  =  480
+	inc  =  8
+	unit  = ""
+
+HeightMax
+	description  =  "Maximum height of the image in pixels."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  480
+	min  =  0
+	max  =  4294967295
+	inc  =  1
+	unit  = ""
+
+I2CAccessBuffer
+	description  =  "Defines the intermediate access buffer that allows the exchange of data between the device's I2C communication and the application."
+	type  =  <7: 7>
+	access_mode  =  <0: 0>
+
+I2CAccessControl
+	description  =  "I2C access control features."
+	type  =  <8: 8>
+	access_mode  =  <0: 0>
+	number of features  =  12
+
+I2CAccessLength
+	description  =  "Controls the number of bytes to transfer to or from the I2CAccessBuffer."
+	type  =  <2: 2>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	min  =  N/A
+	max  =  N/A
+	inc  =  N/A
+	unit  = "B"
+
+I2COperationExecute
+	description  =  "Executes the operations selected by I2COperationSelector on the I2C communication."
+	type  =  <4: 4>
+	access_mode  =  <0: 0>
+
+I2COperationResult
+	description  =  "Represents the number of successfully read/written bytes for the I2C operation."
+	type  =  <2: 2>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	min  =  N/A
+	max  =  N/A
+	inc  =  N/A
+	unit  = "B"
+
+I2COperationSelector
+	description  =  "Selects the target operation for the I2C communication on the device. This operation is executed when the I2COperationExecute feature is called."
+	type  =  <9: 9>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	enumentries  =  N/A
+
+I2COperationStatus
+	description  =  "Represents the I2COperationExecute status."
+	type  =  <9: 9>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	enumentries  =  N/A
+
+I2CRegisterAddress
+	description  =  "Controls the register address for the operation selected by the I2COperationSelector."
+	type  =  <2: 2>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	min  =  N/A
+	max  =  N/A
+	inc  =  N/A
+	unit  = ""
+
+I2CRegisterAddressLength
+	description  =  "Controls the register address length used for the I2C communication."
+	type  =  <9: 9>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	enumentries  =  N/A
+
+I2CSclSource
+	description  =  "Selects the physical line to use for the I2C SCL source."
+	type  =  <9: 9>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	enumentries  =  N/A
+
+I2CSdaSource
+	description  =  "Selects the physical line to use for the I2C SDA source."
+	type  =  <9: 9>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	enumentries  =  N/A
+
+I2CSlaveDeviceAddress
+	description  =  "Controls the device address for the slave."
+	type  =  <2: 2>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	min  =  N/A
+	max  =  N/A
+	inc  =  N/A
+	unit  = ""
+
+I2CSlaveDeviceAddressLength
+	description  =  "Controls the slave device address length used for the I2C communication."
+	type  =  <9: 9>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	enumentries  =  N/A
+
+ImageFormatControl
+	description  =  "Image format control features."
+	type  =  <8: 8>
+	access_mode  =  <3: 3>
+	number of features  =  23
+
+ImagerHeight
+	description  =  "Height of the sensor image after binning and decimation."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  1928
+	min  =  0
+	max  =  4294967295
+	inc  =  1
+	unit  = ""
+
+ImagerOffsetX
+	description  =  "Horizontal offset from the origin of the sensor region."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  0
+	min  =  0
+	max  =  4294967295
+	inc  =  1
+	unit  = ""
+
+ImagerOffsetY
+	description  =  "Vertical offset from the origin of the sensor region."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  0
+	min  =  0
+	max  =  4294967295
+	inc  =  1
+	unit  = ""
+
+ImagerWidth
+	description  =  "Width of the sensor image after binning and decimation."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  640
+	min  =  0
+	max  =  4294967295
+	inc  =  1
+	unit  = ""
+
+IspBayerPattern
+	description  =  "Reports the image Bayer pattern in the ISP."
+	type  =  <9: 9>
+	access_mode  =  <3: 3>
+	value  =  NONE
+	enumentries  =  [RGGB, GRBG, GBRG, BGGR, NONE]
+
+LineFilterSelector
+	description  =  "Selects the input filter to configure. LineMode must be Input."
+	type  =  <9: 9>
+	access_mode  =  <4: 4>
+	value  =  Deglitch
+	enumentries  =  [Deglitch, Debounce]
+
+LineFilterWidth
+	description  =  "Width of the filter in microseconds."
+	type  =  <5: 5>
+	access_mode  =  <4: 4>
+	value  =  0.02
+	min  =  0.02
+	max  =  1310.72
+	inc  =  None
+	unit  = "us"
+
+LineFormat
+	description  =  "Controls the current electrical format of the selected physical input or output Line."
+	type  =  <9: 9>
+	access_mode  =  <3: 3>
+	value  =  OptoCoupled
+	enumentries  =  [NoConnect, TriState, TTL, LVDS, RS422, OptoCoupled, OpenDrain]
+
+LineInverter
+	description  =  "Controls the inversion of the signal of the selected input or output Line."
+	type  =  <3: 3>
+	access_mode  =  <4: 4>
+	value  =  False
+
+LineMode
+	description  =  "Controls if the physical Line is used to Input or Output a signal."
+	type  =  <9: 9>
+	access_mode  =  <4: 4>
+	value  =  Input
+	enumentries  =  [Input]
+
+LineSelector
+	description  =  "Selects the physical line (or pin) of the external device connector to configure."
+	type  =  <9: 9>
+	access_mode  =  <4: 4>
+	value  =  Line0
+	enumentries  =  [Line0, Line1, Line2, Line3, Line4]
+
+LineSource
+	description  =  "Selects which internal acquisition or I/O source signal to output on the selected Line. LineMode must be set to Output."
+	type  =  <9: 9>
+	access_mode  =  <4: 4>
+	value  =  Off
+	enumentries  =  [Off, ExposureActive, UserOutput0, UserOutput1, UserOutput2, UserOutput3, Timer0Active, Counter0Active, Timer1Active, Counter1Active]
+
+LineStatus
+	description  =  "Returns the current status of the selected input or output Line."
+	type  =  <3: 3>
+	access_mode  =  <3: 3>
+	value  =  False
+
+LineStatusAll
+	description  =  "Returns the current status of all available Line signals at time of polling."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  12
+	min  =  0
+	max  =  4294967295
+	inc  =  1
+	unit  = ""
+
+LinkUpTime
+	description  =  "Time the device link has been established in seconds."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  21168
+	min  =  0
+	max  =  4294967295
+	inc  =  1
+	unit  = "s"
+
+LocalizationAddress
+	description  =  "None"
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  2148419052
+	min  =  0
+	max  =  4294967295
+	inc  =  1
+	unit  = ""
+
+LocalizationLanguage
+	description  =  "None"
+	type  =  <9: 9>
+	access_mode  =  <4: 4>
+	value  =  English
+	enumentries  =  [English, Chinese, Japanese]
+
+LocalizationSize
+	description  =  "None"
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  20990
+	min  =  0
+	max  =  4294967295
+	inc  =  1
+	unit  = ""
+
+OffsetX
+	description  =  "Horizontal offset from the origin to the region of interest in pixels."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  0
+	min  =  0
+	max  =  0
+	inc  =  4
+	unit  = ""
+
+OffsetY
+	description  =  "Vertical offset from the origin to the region of interest in pixels."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  0
+	min  =  0
+	max  =  0
+	inc  =  2
+	unit  = ""
+
+PayloadSize
+	description  =  "Provides the number of bytes transferred for each image or chunk on the stream channel."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  2457600
+	min  =  0
+	max  =  4294967295
+	inc  =  1
+	unit  = "B"
+
+PhysicalPixelSize
+	description  =  "None"
+	type  =  <5: 5>
+	access_mode  =  <3: 3>
+	value  =  10.0
+	min  =  -1.7976931348623157e+308
+	max  =  1.7976931348623157e+308
+	inc  =  None
+	unit  = "um"
+
+PixelColorFilter
+	description  =  "Type of color filter that is applied to the image."
+	type  =  <9: 9>
+	access_mode  =  <3: 3>
+	value  =  None
+	enumentries  =  [None, BayerRG, BayerGR, BayerGB, BayerBG]
+
+PixelDynamicRangeMax
+	description  =  "Maximum value that can be returned during the digitization process."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  255
+	min  =  0
+	max  =  4294967295
+	inc  =  1
+	unit  = ""
+
+PixelDynamicRangeMin
+	description  =  "Minimum value that can be returned during the digitization process."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  0
+	min  =  0
+	max  =  4294967295
+	inc  =  1
+	unit  = ""
+
+PixelFormat
+	description  =  "Format of the pixels provided by the device."
+	type  =  <9: 9>
+	access_mode  =  <4: 4>
+	value  =  Coord3D_ABCY16
+	enumentries  =  [Mono8, Mono12p, Mono16, Coord3D_ABCY16s, Coord3D_ABC16s, Coord3D_C16s, Coord3D_ABCY16, Coord3D_ABC16, Coord3D_C16, Confidence16]
+
+PixelSize
+	description  =  "Total size in bits of a pixel of the image."
+	type  =  <9: 9>
+	access_mode  =  <3: 3>
+	value  =  Bpp64
+	enumentries  =  [Bpp1, Bpp2, Bpp4, Bpp8, Bpp10, Bpp12, Bpp14, Bpp16, Bpp20, Bpp24, Bpp30, Bpp32, Bpp36, Bpp48, Bpp64, Bpp96]
+
+PtpClockAccuracy
+	description  =  "Indicates the expected accuracy of the device PTP clock when it is the grandmaster, or in the event it becomes the grandmaster."
+	type  =  <9: 9>
+	access_mode  =  <3: 3>
+	value  =  GreaterThan10s
+	enumentries  =  [Within25ns, Within100ns, Within250ns, Within1us, Within2p5us, Within10us, Within25us, Within100us, Within250us, Within1ms, Within2p5ms, Within10ms, Within25ms, Within100ms, Within250ms, Within1s, Within10s, GreaterThan10s, Unknown]
+
+PtpClockID
+	description  =  "Returns the latched clock ID of the PTP device."
+	type  =  <2: 2>
+	access_mode  =  <1: 1>
+	value  =  N/A
+	min  =  N/A
+	max  =  N/A
+	inc  =  N/A
+	unit  = ""
+
+PtpControl
+	description  =  "Category that contains the features related to the Precision Time Protocol (PTP) of the device."
+	type  =  <8: 8>
+	access_mode  =  <3: 3>
+	number of features  =  12
+
+PtpDataSet
+	description  =  "Reports the current value of the PTP's timestamp."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  21185779977352
+	min  =  0
+	max  =  9223372036854775807
+	inc  =  1
+	unit  = "ns"
+
+PtpDataSetLatch
+	description  =  "Latches the current values from the device’s PTP clock data set."
+	type  =  <4: 4>
+	access_mode  =  <2: 2>
+
+PtpDataSetLatchValue
+	description  =  "Returns the latched value of the PTP clock."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  0
+	min  =  -9223372036854775808
+	max  =  9223372036854775807
+	inc  =  1
+	unit  = "ns"
+
+PtpEnable
+	description  =  "Enables the Precision Time Protocol (PTP)."
+	type  =  <3: 3>
+	access_mode  =  <4: 4>
+	value  =  False
+
+PtpGrandmasterClockID
+	description  =  "Returns the latched grandmaster clock ID of the PTP device."
+	type  =  <2: 2>
+	access_mode  =  <1: 1>
+	value  =  N/A
+	min  =  N/A
+	max  =  N/A
+	inc  =  N/A
+	unit  = ""
+
+PtpOffsetFromMaster
+	description  =  "Returns the latched offset from the PTP master clock in nanoseconds. If PtpOffsetFromMaster returns -1 then the synchronization has not started."
+	type  =  <2: 2>
+	access_mode  =  <1: 1>
+	value  =  N/A
+	min  =  N/A
+	max  =  N/A
+	inc  =  N/A
+	unit  = "ns"
+
+PtpParentClockID
+	description  =  "Returns the latched parent clock ID of the PTP device."
+	type  =  <2: 2>
+	access_mode  =  <1: 1>
+	value  =  N/A
+	min  =  N/A
+	max  =  N/A
+	inc  =  N/A
+	unit  = ""
+
+PtpServoStatus
+	description  =  "Returns the latched state of the clock servo."
+	type  =  <9: 9>
+	access_mode  =  <3: 3>
+	value  =  Disabled
+	enumentries  =  [Locked, Converging, Disabled, Unknown]
+
+PtpSlaveOnly
+	description  =  "Enables slave only operation of the PTP."
+	type  =  <3: 3>
+	access_mode  =  <4: 4>
+	value  =  False
+
+PtpStatus
+	description  =  "Returns the latched state of the PTP clock."
+	type  =  <9: 9>
+	access_mode  =  <3: 3>
+	value  =  Disabled
+	enumentries  =  [Initializing, Faulty, Disabled, Listening, PreMaster, Master, Passive, Uncalibrated, Slave]
+
+ReceivedPacketResendCount
+	description  =  "Returns the number of received packet resend commands."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  59
+	min  =  0
+	max  =  4294967295
+	inc  =  1
+	unit  = ""
+
+ReverseX
+	description  =  "Flip horizontally the image sent by the device."
+	type  =  <3: 3>
+	access_mode  =  <0: 0>
+	value  =  N/A
+
+ReverseY
+	description  =  "Flip vertically the image sent by the device."
+	type  =  <3: 3>
+	access_mode  =  <0: 0>
+	value  =  N/A
+
+Root
+	description  =  ""
+	type  =  <8: 8>
+	access_mode  =  <3: 3>
+	number of features  =  19
+
+Scan3dAmplitudeGain
+	description  =  "Linear gain applied to amplitude image."
+	type  =  <5: 5>
+	access_mode  =  <4: 4>
+	value  =  1.0
+	min  =  0.0
+	max  =  128.0
+	inc  =  None
+	unit  = ""
+
+Scan3dAxisMax
+	description  =  "Maximum valid transmitted coordinate value of the selected Axis."
+	type  =  <5: 5>
+	access_mode  =  <3: 3>
+	value  =  1500.0
+	min  =  0.0
+	max  =  4294967295.0
+	inc  =  1.0
+	unit  = ""
+
+Scan3dCommunicationChannel
+	description  =  "Selects which communication channel to use to avoid interference between multiple devices."
+	type  =  <2: 2>
+	access_mode  =  <4: 4>
+	value  =  0
+	min  =  0
+	max  =  4
+	inc  =  1
+	unit  = ""
+
+Scan3dConfidenceThresholdEnable
+	description  =  "Controls if the confidence threshold is enabled and applied to the output."
+	type  =  <3: 3>
+	access_mode  =  <4: 4>
+	value  =  True
+
+Scan3dConfidenceThresholdMin
+	description  =  "Controls the minimum threshold value that determines whether or not the depth of a pixel is reliable."
+	type  =  <2: 2>
+	access_mode  =  <4: 4>
+	value  =  50
+	min  =  0
+	max  =  65535
+	inc  =  1
+	unit  = ""
+
+Scan3dControl
+	description  =  "Category for control of 3D camera specific features."
+	type  =  <8: 8>
+	access_mode  =  <3: 3>
+	number of features  =  17
+
+Scan3dCoordinateOffset
+	description  =  "Offset when transforming a pixel from relative coordinates to world coordinates."
+	type  =  <5: 5>
+	access_mode  =  <3: 3>
+	value  =  0.0
+	min  =  -1.7976931348623157e+308
+	max  =  1.7976931348623157e+308
+	inc  =  None
+	unit  = ""
+
+Scan3dCoordinateScale
+	description  =  "Scale factor when transforming a pixel from relative coordinates to world coordinates."
+	type  =  <5: 5>
+	access_mode  =  <3: 3>
+	value  =  0.25
+	min  =  -1.7976931348623157e+308
+	max  =  1.7976931348623157e+308
+	inc  =  None
+	unit  = ""
+
+Scan3dCoordinateSelector
+	description  =  "Selects the individual coordinates in the vectors for 3D information/transformation."
+	type  =  <9: 9>
+	access_mode  =  <4: 4>
+	value  =  CoordinateC
+	enumentries  =  [CoordinateA, CoordinateB, CoordinateC]
+
+Scan3dCoordinateSystem
+	description  =  "Specifies the Coordinate system to use for the device."
+	type  =  <9: 9>
+	access_mode  =  <3: 3>
+	value  =  Cartesian
+	enumentries  =  [Cartesian, Spherical, Cylindrical]
+
+Scan3dDistanceUnit
+	description  =  "Specifies the unit used when delivering (calibrated) distance data."
+	type  =  <9: 9>
+	access_mode  =  <3: 3>
+	value  =  Millimeter
+	enumentries  =  [Millimeter, Inch, Pixel]
+
+Scan3dIlluminatorSelector
+	description  =  "Selects the illuminator."
+	type  =  <9: 9>
+	access_mode  =  <4: 4>
+	value  =  Illuminator0
+	enumentries  =  [Illuminator0, Illuminator1, Illuminator2, Illuminator3]
+
+Scan3dIlluminatorStatus
+	description  =  "Status of the diffuser for the selected illuminator."
+	type  =  <9: 9>
+	access_mode  =  <3: 3>
+	value  =  Normal
+	enumentries  =  [Normal, Error]
+
+Scan3dIlluminatorStatusAll
+	description  =  "Status of all the illuminators."
+	type  =  <9: 9>
+	access_mode  =  <3: 3>
+	value  =  Normal
+	enumentries  =  [Normal, Error]
+
+Scan3dImageAccumulation
+	description  =  "Number of images to accumulate."
+	type  =  <2: 2>
+	access_mode  =  <4: 4>
+	value  =  1
+	min  =  1
+	max  =  32
+	inc  =  1
+	unit  = ""
+
+Scan3dModeSelector
+	description  =  "Selects which Scan 3D Mode is enabled."
+	type  =  <9: 9>
+	access_mode  =  <4: 4>
+	value  =  Processed
+	enumentries  =  [Processed, Raw]
+
+Scan3dOperatingMode
+	description  =  "Selects the time of flight operating mode."
+	type  =  <9: 9>
+	access_mode  =  <4: 4>
+	value  =  Distance1500mm
+	enumentries  =  [Distance1500mm, Distance6000mm]
+
+Scan3dSpatialFilterEnable
+	description  =  "Controls if spatial filtering is applied."
+	type  =  <3: 3>
+	access_mode  =  <4: 4>
+	value  =  True
+
+SensorHeight
+	description  =  "Effective height of the sensor in pixels."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  3856
+	min  =  0
+	max  =  4294967295
+	inc  =  1
+	unit  = ""
+
+SensorWidth
+	description  =  "Effective width of the sensor in pixels."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  1280
+	min  =  0
+	max  =  4294967295
+	inc  =  1
+	unit  = ""
+
+SequencerConfigurationMode
+	description  =  "Controls if the sequencer configuration mode is active."
+	type  =  <9: 9>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	enumentries  =  N/A
+
+SequencerControl
+	description  =  "Category for Sequencer Control features."
+	type  =  <8: 8>
+	access_mode  =  <0: 0>
+	number of features  =  13
+
+SequencerFeatureEnable
+	description  =  "Enables the selected feature and make it active in all the sequencer sets."
+	type  =  <3: 3>
+	access_mode  =  <0: 0>
+	value  =  N/A
+
+SequencerFeatureSelector
+	description  =  "Selects which sequencer features to control."
+	type  =  <9: 9>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	enumentries  =  N/A
+
+SequencerMode
+	description  =  "Controls if the sequencer mechanism is active."
+	type  =  <9: 9>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	enumentries  =  N/A
+
+SequencerPathSelector
+	description  =  "Selects to which branching path further path settings applies."
+	type  =  <2: 2>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	min  =  N/A
+	max  =  N/A
+	inc  =  N/A
+	unit  = ""
+
+SequencerSetActive
+	description  =  "Contains the currently active sequencer set."
+	type  =  <2: 2>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	min  =  N/A
+	max  =  N/A
+	inc  =  N/A
+	unit  = ""
+
+SequencerSetLoad
+	description  =  "Loads the sequencer set selected by SequencerSetSelector in the device."
+	type  =  <4: 4>
+	access_mode  =  <0: 0>
+
+SequencerSetNext
+	description  =  "Specifies the next sequencer set."
+	type  =  <2: 2>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	min  =  N/A
+	max  =  N/A
+	inc  =  N/A
+	unit  = ""
+
+SequencerSetSave
+	description  =  "Saves the current device state to the sequencer set selected by the SequencerSetSelector."
+	type  =  <4: 4>
+	access_mode  =  <0: 0>
+
+SequencerSetSelector
+	description  =  "Selects the sequencer set to which further feature settings applies."
+	type  =  <2: 2>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	min  =  N/A
+	max  =  N/A
+	inc  =  N/A
+	unit  = ""
+
+SequencerSetStart
+	description  =  "Sets the initial/start sequencer set, which is the first set used within a sequencer."
+	type  =  <2: 2>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	min  =  N/A
+	max  =  N/A
+	inc  =  N/A
+	unit  = ""
+
+SequencerTriggerActivation
+	description  =  "Specifies the activation mode of the sequencer trigger."
+	type  =  <9: 9>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	enumentries  =  N/A
+
+SequencerTriggerSource
+	description  =  "Specifies the internal signal or physical input line to use as the sequencer trigger source."
+	type  =  <9: 9>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	enumentries  =  N/A
+
+SerialAccessBuffer
+	description  =  "Defines the intermediate access buffer that allows the exchange of data between the device's serial communication and the application."
+	type  =  <7: 7>
+	access_mode  =  <0: 0>
+
+SerialAccessControl
+	description  =  "Serial access control features."
+	type  =  <8: 8>
+	access_mode  =  <0: 0>
+	number of features  =  13
+
+SerialAccessLength
+	description  =  "Controls the number of bytes to transfer to or from the SerialAccessBuffer."
+	type  =  <2: 2>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	min  =  N/A
+	max  =  N/A
+	inc  =  N/A
+	unit  = "B"
+
+SerialBaudRate
+	description  =  "This feature controls the baud rate used for serial communication."
+	type  =  <9: 9>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	enumentries  =  N/A
+
+SerialDataBits
+	description  =  "This feature controls the number of data bits used for serial communication."
+	type  =  <9: 9>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	enumentries  =  N/A
+
+SerialFlowControl
+	description  =  "This feature controls the flow control used for serial communication."
+	type  =  <9: 9>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	enumentries  =  N/A
+
+SerialOperationExecute
+	description  =  "Executes the operation selected by SerialOperationSelector on the serial communication."
+	type  =  <4: 4>
+	access_mode  =  <0: 0>
+
+SerialOperationResult
+	description  =  "Represents the Serial operation result. For Read or Write operations, the number of successfully read/written bytes is returned."
+	type  =  <2: 2>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	min  =  N/A
+	max  =  N/A
+	inc  =  N/A
+	unit  = ""
+
+SerialOperationSelector
+	description  =  "Selects the target operation for the serial communication on the device. This operation is executed when the SerialOperationExecute feature is called."
+	type  =  <9: 9>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	enumentries  =  N/A
+
+SerialOperationStatus
+	description  =  "Represents the SerialOperationExecute status."
+	type  =  <9: 9>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	enumentries  =  N/A
+
+SerialParity
+	description  =  "This feature controls the parity used for serial communication."
+	type  =  <9: 9>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	enumentries  =  N/A
+
+SerialReceiveSource
+	description  =  "Selects the physical line to use for the serial communication receive source."
+	type  =  <9: 9>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	enumentries  =  N/A
+
+SerialReceivedSize
+	description  =  "Represents the number of bytes received from or transfered to the serial communication."
+	type  =  <2: 2>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	min  =  N/A
+	max  =  N/A
+	inc  =  N/A
+	unit  = "B"
+
+SerialStopBits
+	description  =  "This feature controls the number of stop bits used for serial communication."
+	type  =  <9: 9>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	enumentries  =  N/A
+
+SoftwareSignalControl
+	description  =  "Category that contains the Software Signal Control features."
+	type  =  <8: 8>
+	access_mode  =  <3: 3>
+	number of features  =  2
+
+SoftwareSignalPulse
+	description  =  "Generates a pulse signal that can be used as a software trigger."
+	type  =  <4: 4>
+	access_mode  =  <2: 2>
+
+SoftwareSignalSelector
+	description  =  "Selects which Software Signal features to control."
+	type  =  <9: 9>
+	access_mode  =  <4: 4>
+	value  =  SoftwareSignal0
+	enumentries  =  [SoftwareSignal0, SoftwareSignal1]
+
+TestControl
+	description  =  "Category for Test Control features."
+	type  =  <8: 8>
+	access_mode  =  <3: 3>
+	number of features  =  3
+
+TestEventGenerate
+	description  =  "Generates a Test Event."
+	type  =  <4: 4>
+	access_mode  =  <1: 1>
+
+TestMode
+	description  =  "None"
+	type  =  <2: 2>
+	access_mode  =  <4: 4>
+	value  =  0
+	min  =  0
+	max  =  4294967295
+	inc  =  1
+	unit  = ""
+
+TestPattern
+	description  =  "Selects the type of test pattern that is generated by the device as image source."
+	type  =  <9: 9>
+	access_mode  =  <4: 4>
+	value  =  Off
+	enumentries  =  [Off, Pattern0, Pattern1, Pattern2, Pattern3, Pattern4, Pattern5, Pattern6, Pattern7]
+
+TestPendingAck
+	description  =  "Tests the device's pending acknowledge feature."
+	type  =  <2: 2>
+	access_mode  =  <4: 4>
+	value  =  0
+	min  =  0
+	max  =  4294967295
+	inc  =  1
+	unit  = "ms"
+
+TimerDelay
+	description  =  "Sets the duration (in microseconds) of the delay to apply at the reception of a trigger before stating the Timer."
+	type  =  <5: 5>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	min  =  N/A
+	max  =  N/A
+	inc  =  None
+	unit  = "us"
+
+TimerDuration
+	description  =  "Sets the duration (in microseconds) of the Timer pulse."
+	type  =  <5: 5>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	min  =  N/A
+	max  =  N/A
+	inc  =  None
+	unit  = "us"
+
+TimerReset
+	description  =  "Does a software reset of the selected Timer and starts it."
+	type  =  <4: 4>
+	access_mode  =  <0: 0>
+
+TimerSelector
+	description  =  "Selects which Timer to configure."
+	type  =  <9: 9>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	enumentries  =  N/A
+
+TimerStatus
+	description  =  "Returns the current status of the Timer."
+	type  =  <9: 9>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	enumentries  =  N/A
+
+TimerTriggerActivation
+	description  =  "Selects the Activation mode of the trigger to start the Timer."
+	type  =  <9: 9>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	enumentries  =  N/A
+
+TimerTriggerSource
+	description  =  "Selects the source to start the Timer."
+	type  =  <9: 9>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	enumentries  =  N/A
+
+TimerValue
+	description  =  "Reads or writes the current value of the selected Timer."
+	type  =  <5: 5>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	min  =  N/A
+	max  =  N/A
+	inc  =  None
+	unit  = "us"
+
+Timestamp
+	description  =  "Reports the current value of the device timestamp counter."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  21185845669952
+	min  =  0
+	max  =  9223372036854775807
+	inc  =  1
+	unit  = "ns"
+
+TimestampLatch
+	description  =  "Latches the current timestamp counter into TimestampLatchValue."
+	type  =  <4: 4>
+	access_mode  =  <2: 2>
+
+TimestampLatchValue
+	description  =  "Returns the latched value of the timestamp counter."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  0
+	min  =  -9223372036854775808
+	max  =  9223372036854775807
+	inc  =  1
+	unit  = "ns"
+
+TimestampReset
+	description  =  "Resets the current value of the device timestamp counter. Executing this command causes the timestamp counter to restart automatically."
+	type  =  <4: 4>
+	access_mode  =  <2: 2>
+
+TransferAbort
+	description  =  "Immediately abort the streaming of data block(s)."
+	type  =  <4: 4>
+	access_mode  =  <0: 0>
+
+TransferBlockCount
+	description  =  "Specifies the number of data Blocks that the device should stream before stopping."
+	type  =  <2: 2>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	min  =  N/A
+	max  =  N/A
+	inc  =  N/A
+	unit  = ""
+
+TransferControl
+	description  =  "Data Transfer Control features."
+	type  =  <8: 8>
+	access_mode  =  <0: 0>
+	number of features  =  14
+
+TransferControlMode
+	description  =  "Selects the control method for the transfers."
+	type  =  <9: 9>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	enumentries  =  N/A
+
+TransferOperationMode
+	description  =  "Selects the operation mode of the transfer."
+	type  =  <9: 9>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	enumentries  =  N/A
+
+TransferPause
+	description  =  "Pauses the streaming of data Block(s)."
+	type  =  <4: 4>
+	access_mode  =  <0: 0>
+
+TransferQueueCurrentBlockCount
+	description  =  "Returns the number of Block(s) currently in the transfer queue."
+	type  =  <2: 2>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	min  =  N/A
+	max  =  N/A
+	inc  =  N/A
+	unit  = ""
+
+TransferQueueMaxBlockCount
+	description  =  "Controls the maximum number of data blocks that can be stored in the block queue of the selected stream."
+	type  =  <2: 2>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	min  =  N/A
+	max  =  N/A
+	inc  =  N/A
+	unit  = ""
+
+TransferQueueMode
+	description  =  "Specifies the operation mode of the transfer queue."
+	type  =  <9: 9>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	enumentries  =  N/A
+
+TransferResume
+	description  =  "Resumes a data Blocks streaming that was previously paused by a TransferPause command."
+	type  =  <4: 4>
+	access_mode  =  <0: 0>
+
+TransferSelector
+	description  =  "Selects which stream transfers are currently controlled by the selected Transfer features."
+	type  =  <9: 9>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	enumentries  =  N/A
+
+TransferStart
+	description  =  "Starts the streaming of data blocks out of the device."
+	type  =  <4: 4>
+	access_mode  =  <0: 0>
+
+TransferStatus
+	description  =  "Reads the status of the Transfer module signal selected by TransferStatusSelector."
+	type  =  <3: 3>
+	access_mode  =  <0: 0>
+	value  =  N/A
+
+TransferStatusSelector
+	description  =  "Selects which status of the transfer module to read."
+	type  =  <9: 9>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	enumentries  =  N/A
+
+TransferStop
+	description  =  "Stops the streaming of data Block(s)."
+	type  =  <4: 4>
+	access_mode  =  <0: 0>
+
+TransmissionFrameRate
+	description  =  "Specifies the rate (in Hertz )at which frames are transmitted."
+	type  =  <5: 5>
+	access_mode  =  <3: 3>
+	value  =  30.00030000300003
+	min  =  -1.7976931348623157e+308
+	max  =  1.7976931348623157e+308
+	inc  =  None
+	unit  = "Hz"
+
+TransportLayerControl
+	description  =  "Transport layer control features."
+	type  =  <8: 8>
+	access_mode  =  <3: 3>
+	number of features  =  6
+
+TriggerActivation
+	description  =  "This node specifies the state in which trigger is activated."
+	type  =  <9: 9>
+	access_mode  =  <4: 4>
+	value  =  RisingEdge
+	enumentries  =  [RisingEdge, FallingEdge, AnyEdge, LevelHigh, LevelLow]
+
+TriggerArmed
+	description  =  "Specifies whether the trigger is armed. If the trigger is not armed, triggers will be ignored."
+	type  =  <3: 3>
+	access_mode  =  <3: 3>
+	value  =  False
+
+TriggerDelay
+	description  =  "Specifies the delay in microseconds (us) to apply after the trigger reception before activating it."
+	type  =  <5: 5>
+	access_mode  =  <4: 4>
+	value  =  0.0
+	min  =  0.0
+	max  =  16777215.0
+	inc  =  1.0
+	unit  = "us"
+
+TriggerLatency
+	description  =  "Enables low latency trigger mode."
+	type  =  <9: 9>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	enumentries  =  N/A
+
+TriggerMode
+	description  =  "Controls the On/Off status of the current trigger."
+	type  =  <9: 9>
+	access_mode  =  <4: 4>
+	value  =  Off
+	enumentries  =  [Off, On]
+
+TriggerOverlap
+	description  =  "Specifies the type of trigger overlap permitted with the previous frame or line. This defines when a valid trigger will be accepted (or latched) for a new frame or a new line."
+	type  =  <9: 9>
+	access_mode  =  <4: 4>
+	value  =  Off
+	enumentries  =  [Off, PreviousFrame]
+
+TriggerSelector
+	description  =  "This node selects the specific trigger type to configure."
+	type  =  <9: 9>
+	access_mode  =  <4: 4>
+	value  =  FrameStart
+	enumentries  =  [AcquisitionStart, FrameStart]
+
+TriggerSoftware
+	description  =  "Executing this will generate a software trigger signal. Note that current TriggerSource must be set to Software."
+	type  =  <4: 4>
+	access_mode  =  <2: 2>
+
+TriggerSource
+	description  =  "This node specifies the source of the trigger. It can be a software internal signal of a physical input hardware signal."
+	type  =  <9: 9>
+	access_mode  =  <4: 4>
+	value  =  Line0
+	enumentries  =  [Software, Line0, Line2, Line3, Action0]
+
+UnavailablePacketResendCount
+	description  =  "Returns the number of unavailable packet resends handled by the device."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  43
+	min  =  0
+	max  =  4294967295
+	inc  =  1
+	unit  = ""
+
+UserOutputSelector
+	description  =  "Selects which bit of the User Output register will be set by UserOutputValue."
+	type  =  <9: 9>
+	access_mode  =  <4: 4>
+	value  =  UserOutput0
+	enumentries  =  [UserOutput0, UserOutput1, UserOutput2, UserOutput3]
+
+UserOutputValue
+	description  =  "Sets the value of the bit selected by UserOutputSelector."
+	type  =  <3: 3>
+	access_mode  =  <4: 4>
+	value  =  False
+
+UserOutputValueAll
+	description  =  "Sets the value of all the bits of the User Output register. It is subject to the UserOutputValueAllMask."
+	type  =  <2: 2>
+	access_mode  =  <4: 4>
+	value  =  0
+	min  =  0
+	max  =  4294967295
+	inc  =  1
+	unit  = ""
+
+UserOutputValueAllMask
+	description  =  "Sets the write mask to apply to the value specified by UserOutputValueAll before writing it in the User Output register. If the UserOutputValueAllMask feature is present, setting the user Output register using UserOutputValueAll will only change the bits that have a corresponding bit in the mask set to one."
+	type  =  <2: 2>
+	access_mode  =  <4: 4>
+	value  =  0
+	min  =  0
+	max  =  4294967295
+	inc  =  1
+	unit  = ""
+
+UserSetControl
+	description  =  "Category that contains the User Set control features."
+	type  =  <8: 8>
+	access_mode  =  <3: 3>
+	number of features  =  6
+
+UserSetDefault
+	description  =  "Selects the feature User Set to load and make active by default when the device is reset."
+	type  =  <9: 9>
+	access_mode  =  <4: 4>
+	value  =  UserSet2
+	enumentries  =  [Default, UserSet1, UserSet2]
+
+UserSetFeatureEnable
+	description  =  "Enables the selected feature and make it active in all the User Sets."
+	type  =  <3: 3>
+	access_mode  =  <3: 3>
+	value  =  True
+
+UserSetFeatureSelector
+	description  =  "Selects which individual User Set feature to control."
+	type  =  <9: 9>
+	access_mode  =  <4: 4>
+	value  =  AcquisitionBurstFrameCount
+	enumentries  =  [AcquisitionBurstFrameCount, AcquisitionFrameCount, AcquisitionFrameRate, AcquisitionFrameRateEnable, AcquisitionMode, ActionGroupKey, ActionGroupMask, ChunkEnable, ChunkModeActive, ChunkSelector, ConversionGain, DeviceIndicatorMode, DeviceLinkSelector, DeviceLinkThroughputLimit, DeviceLinkThroughputLimitMode, DeviceLinkThroughputReserve, DeviceStreamChannelPacketSize, EventNotification, EventSelector, ExposureTimeSelector, GevSCPD, GevSCPSDoNotFragment, GevSCPSPacketSize, LineInverter, LineMode, LineSelector, LineSource, PixelFormat, Scan3dAmplitudeGain, Scan3dCommunicationChannel, Scan3dConfidenceThresholdEnable, Scan3dConfidenceThresholdMin, Scan3dIlluminatorSelector, Scan3dImageAccumulation, Scan3dModeSelector, Scan3dOperatingMode, Scan3dSpatialFilterEnable, TestPattern, TriggerActivation, TriggerDelay, TriggerMode, TriggerOverlap, TriggerSelector, TriggerSource, UserOutputSelector, UserOutputValue, VoltageExternalEnable]
+
+UserSetLoad
+	description  =  "Loads the User Set specified by UserSetSelector to the device and makes it active."
+	type  =  <4: 4>
+	access_mode  =  <2: 2>
+
+UserSetSave
+	description  =  "Save the User Set specified by UserSetSelector to the non-volatile memory of the device."
+	type  =  <4: 4>
+	access_mode  =  <1: 1>
+
+UserSetSelector
+	description  =  "Selects the feature User Set to load, save, or configure."
+	type  =  <9: 9>
+	access_mode  =  <4: 4>
+	value  =  Default
+	enumentries  =  [Default, UserSet1, UserSet2]
+
+ValidPacketResendCount
+	description  =  "Returns the number of valid packet resends handled by the device."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  16
+	min  =  0
+	max  =  4294967295
+	inc  =  1
+	unit  = ""
+
+VoltageExternalEnable
+	description  =  "Controls if the external voltage is enabled."
+	type  =  <3: 3>
+	access_mode  =  <1: 1>
+	value  =  N/A
+
+Width
+	description  =  "Width of the image provided by the device in pixels."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  640
+	min  =  4
+	max  =  640
+	inc  =  4
+	unit  = ""
+
+WidthMax
+	description  =  "Maximum width of the image in pixels."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  640
+	min  =  0
+	max  =  4294967295
+	inc  =  1
+	unit  = ""

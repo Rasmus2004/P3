@@ -1,0 +1,344 @@
+
+BufferHandlingControl
+	description  =  "Contains all features of the Data Stream module that control the used buffers."
+	type  =  <8: 8>
+	access_mode  =  <3: 3>
+	number of features  =  23
+
+EvsFeatures
+	description  =  "Category that contains all EVSn features of the Data Stream module."
+	type  =  <8: 8>
+	access_mode  =  <0: 0>
+	number of features  =  10
+
+MultipartFeatures
+	description  =  "Category that contains all Multipart features of the Data Stream module."
+	type  =  <8: 8>
+	access_mode  =  <3: 3>
+	number of features  =  1
+
+PayloadSize
+	description  =  "Size of the expected data in bytes. Note that this feature "overwrites" the PayloadSize of the remote device, see also sections "Data Payload Delivery" and "Allocate Memory" of the GenICam GenTL standard."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  2457600
+	min  =  -9223372036854775808
+	max  =  9223372036854775807
+	inc  =  1
+	unit  = "Byte"
+
+Root
+	description  =  ""
+	type  =  <8: 8>
+	access_mode  =  <3: 3>
+	number of features  =  4
+
+StreamAnnounceBufferMinimum
+	description  =  "Minimal number of buffers to announce to enable selected buffer handling mode."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  1
+	min  =  -9223372036854775808
+	max  =  9223372036854775807
+	inc  =  1
+	unit  = ""
+
+StreamAnnouncedBufferCount
+	description  =  "Number of announced (known) buffers on this stream. This value is volatile. It may change if additional buffers are announced and/or buffers are revoked by the GenTL Consumer."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  0
+	min  =  1
+	max  =  9223372036854775807
+	inc  =  1
+	unit  = ""
+
+StreamAutoNegotiatePacketSize
+	description  =  "Controls whether the max packet size will be determined and applied to the device before streaming begins."
+	type  =  <3: 3>
+	access_mode  =  <4: 4>
+	value  =  False
+
+StreamBufferAlignment
+	description  =  "Alignment size in bytes of the buffer passed to DSAnnounceBuffer."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  1
+	min  =  -9223372036854775808
+	max  =  9223372036854775807
+	inc  =  1
+	unit  = "Byte"
+
+StreamBufferExpiry
+	description  =  "Maximum time that an image buffer will wait for all packets."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  500
+	min  =  50
+	max  =  3600000
+	inc  =  1
+	unit  = "ms"
+
+StreamBufferExpiryOverride
+	description  =  "Controls if the StreamBufferExpiry feature is writable and used to override the expiry time."
+	type  =  <3: 3>
+	access_mode  =  <4: 4>
+	value  =  False
+
+StreamBufferHandlingMode
+	description  =  "Available buffer handling modes of this Data Stream:"
+	type  =  <9: 9>
+	access_mode  =  <4: 4>
+	value  =  OldestFirstOverwrite
+	enumentries  =  [OldestFirst, OldestFirstOverwrite, NewestOnly]
+
+StreamChunkCountMaximum
+	description  =  "Maximum number of chunks to be expected in a buffer (can be used to allocate the array for the DSGetBufferChunkData function)."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  0
+	min  =  -9223372036854775808
+	max  =  9223372036854775807
+	inc  =  1
+	unit  = ""
+
+StreamCumulativeIncompleteImageCount
+	description  =  "Number of incomplete images, not resetting on each stream start."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  0
+	min  =  0
+	max  =  9223372036854775807
+	inc  =  1
+	unit  = "Image"
+
+StreamCumulativeMissedImageCount
+	description  =  "Number of missed images, not resetting on each stream start."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  0
+	min  =  0
+	max  =  9223372036854775807
+	inc  =  1
+	unit  = "Image"
+
+StreamDeliveredFrameCount
+	description  =  "Number of delivered frames since last acquisition start."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  0
+	min  =  -9223372036854775808
+	max  =  9223372036854775807
+	inc  =  1
+	unit  = ""
+
+StreamEvsBitDepth
+	description  =  "Bit depth for CD frames."
+	type  =  <9: 9>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	enumentries  =  N/A
+
+StreamEvsColorTheme
+	description  =  "Color theme for CD frames."
+	type  =  <9: 9>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	enumentries  =  N/A
+
+StreamEvsEventBufferPoolSize
+	description  =  "Amount of memory to use for event data packets."
+	type  =  <2: 2>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	min  =  N/A
+	max  =  N/A
+	inc  =  N/A
+	unit  = "MB"
+
+StreamEvsEventRate
+	description  =  "Evs event rate."
+	type  =  <5: 5>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	min  =  N/A
+	max  =  N/A
+	inc  =  None
+	unit  = ""
+
+StreamEvsGvspFrameRate
+	description  =  "Gvsp frame rate."
+	type  =  <5: 5>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	min  =  N/A
+	max  =  N/A
+	inc  =  None
+	unit  = ""
+
+StreamEvsLinkThroughput
+	description  =  "Link throughput."
+	type  =  <5: 5>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	min  =  N/A
+	max  =  N/A
+	inc  =  None
+	unit  = ""
+
+StreamEvsOutputFormat
+	description  =  "Output type for evs events."
+	type  =  <9: 9>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	enumentries  =  N/A
+
+StreamFrameGeneratorAccumTime
+	description  =  "Accumulation Time."
+	type  =  <2: 2>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	min  =  N/A
+	max  =  N/A
+	inc  =  N/A
+	unit  = "us"
+
+StreamFrameGeneratorAccumTimePreset
+	description  =  "Accum time presets."
+	type  =  <9: 9>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	enumentries  =  N/A
+
+StreamFrameGeneratorFPS
+	description  =  "Frame generator fps."
+	type  =  <5: 5>
+	access_mode  =  <0: 0>
+	value  =  N/A
+	min  =  N/A
+	max  =  N/A
+	inc  =  N/A
+	unit  = "Hz"
+
+StreamGvspScdaOverwriteEnable
+	description  =  "Controls ability to overwrite the SCDA addres in GVSP."
+	type  =  <3: 3>
+	access_mode  =  <4: 4>
+	value  =  False
+
+StreamID
+	description  =  "Device unique ID for the data stream, e.g. a GUID."
+	type  =  <6: 6>
+	access_mode  =  <3: 3>
+	value  =  "0"
+
+StreamInformation
+	description  =  "Category that contains all Stream Information features of the Data Stream module."
+	type  =  <8: 8>
+	access_mode  =  <3: 3>
+	number of features  =  2
+
+StreamInputBufferCount
+	description  =  "Number of buffers in the input buffer pool."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  0
+	min  =  -9223372036854775808
+	max  =  9223372036854775807
+	inc  =  1
+	unit  = ""
+
+StreamIsGrabbing
+	description  =  "Flag indicating whether the acquisition engine is started or not. This is independent from the acquisition status of the remote device."
+	type  =  <3: 3>
+	access_mode  =  <3: 3>
+	value  =  False
+
+StreamLostFrameCount
+	description  =  "Number of lost frames due to queue underrun. This number is initialized with zero at the time the stream is opened and incremented every time the data could not be acquired because there was no buffer in the input buffer pool."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  0
+	min  =  -9223372036854775808
+	max  =  9223372036854775807
+	inc  =  1
+	unit  = ""
+
+StreamMaxNumResendRequestsPerImage
+	description  =  "Maximum number of resend requests per image."
+	type  =  <2: 2>
+	access_mode  =  <4: 4>
+	value  =  5
+	min  =  0
+	max  =  9223372036854775807
+	inc  =  1
+	unit  = ""
+
+StreamMissedImageCount
+	description  =  "Number of missed images, resetting on each stream start."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  0
+	min  =  0
+	max  =  9223372036854775807
+	inc  =  1
+	unit  = "Image"
+
+StreamMissedPacketCount
+	description  =  "Number of missed packets, resetting on each stream start."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  0
+	min  =  0
+	max  =  9223372036854775807
+	inc  =  1
+	unit  = "Packet"
+
+StreamMulticastEnable
+	description  =  "Controls whether the device will stream in multicast or unicast mode."
+	type  =  <3: 3>
+	access_mode  =  <4: 4>
+	value  =  False
+
+StreamMultipartNumParts
+	description  =  "Number of parts to combine to form an image."
+	type  =  <2: 2>
+	access_mode  =  <1: 1>
+	value  =  N/A
+	min  =  N/A
+	max  =  N/A
+	inc  =  N/A
+	unit  = ""
+
+StreamOutputBufferCount
+	description  =  "Number of buffers in the output buffer queue."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  0
+	min  =  -9223372036854775808
+	max  =  9223372036854775807
+	inc  =  1
+	unit  = ""
+
+StreamPacketResendEnable
+	description  =  "Controls the On/Off status packet resend."
+	type  =  <3: 3>
+	access_mode  =  <4: 4>
+	value  =  False
+
+StreamStartedFrameCount
+	description  =  "Number of frames started in the acquisition engine. This number is incremented every time a new buffer is started to be filled (data written to) regardless if the buffer is later delivered to the user or discarded for any reason. This number is initialized with 0 at at the time of the stream is opened. It is not reset until the stream is closed."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  0
+	min  =  -9223372036854775808
+	max  =  9223372036854775807
+	inc  =  1
+	unit  = ""
+
+StreamType
+	description  =  "Transport layer type of the Data Stream."
+	type  =  <9: 9>
+	access_mode  =  <3: 3>
+	value  =  GigEVision
+	enumentries  =  [GigEVision, CameraLink, CameraLinkHS, CoaXPress, USB3Vision, Custom]

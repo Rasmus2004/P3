@@ -1,0 +1,179 @@
+
+DeviceEnumeration
+	description  =  "Category that contains all Device Enumeration features of the Interface module."
+	type  =  <8: 8>
+	access_mode  =  <3: 3>
+	number of features  =  11
+
+DeviceID
+	description  =  "Interface wide unique identifier of the selected device. This value only changes on execution of "DeviceUpdateList"."
+	type  =  <6: 6>
+	access_mode  =  <3: 3>
+	value  =  "200100069"
+
+DeviceModelName
+	description  =  "Name of the device model. This value only changes on execution of "DeviceUpdateList"."
+	type  =  <6: 6>
+	access_mode  =  <3: 3>
+	value  =  "HLS003S-001"
+
+DeviceSelector
+	description  =  "Selector for the different devices on this interface. This value only changes on execution of "DeviceUpdateList". The selector is 0-based in order to match the index of the C interface."
+	type  =  <2: 2>
+	access_mode  =  <4: 4>
+	value  =  0
+	min  =  0
+	max  =  0
+	inc  =  1
+	unit  = ""
+
+DeviceSerialNumber
+	description  =  "Serial number of the remote device. This value only changes on execution of "DeviceUpdateList"."
+	type  =  <6: 6>
+	access_mode  =  <3: 3>
+	value  =  "200100069"
+
+DeviceUpdateList
+	description  =  "Updates the internal device list."
+	type  =  <4: 4>
+	access_mode  =  <2: 2>
+
+DeviceUserID
+	description  =  "User-programmable device identifier of the remote device. This value only changes on execution of "DeviceUpdateList"."
+	type  =  <6: 6>
+	access_mode  =  <3: 3>
+	value  =  ""
+
+DeviceVendorName
+	description  =  "Name of the device vendor. This value only changes on execution of "DeviceUpdateList"."
+	type  =  <6: 6>
+	access_mode  =  <3: 3>
+	value  =  "Lucid Vision Labs"
+
+GevDeviceIPAddress
+	description  =  "Current IP address of the GVCP interface of the selected remote device."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  2887416005
+	min  =  -9223372036854775808
+	max  =  9223372036854775807
+	inc  =  1
+	unit  = ""
+
+GevDeviceMACAddress
+	description  =  "48-bit MAC address of the GVCP interface of the selected remote device."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  30853702281768
+	min  =  -9223372036854775808
+	max  =  9223372036854775807
+	inc  =  1
+	unit  = ""
+
+GevDeviceSubnetMask
+	description  =  "Current subnet mask of the GVCP interface of the selected remote device."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  4294967040
+	min  =  -9223372036854775808
+	max  =  9223372036854775807
+	inc  =  1
+	unit  = ""
+
+GevInterfaceGateway
+	description  =  "IP address of the selected gateway entry of this interface."
+	type  =  <2: 2>
+	access_mode  =  <1: 1>
+	value  =  N/A
+	min  =  N/A
+	max  =  N/A
+	inc  =  N/A
+	unit  = ""
+
+GevInterfaceGatewaySelector
+	description  =  "Selector for the different gateway entries for this interface. The selector is 0-based."
+	type  =  <2: 2>
+	access_mode  =  <1: 1>
+	value  =  N/A
+	min  =  N/A
+	max  =  N/A
+	inc  =  N/A
+	unit  = ""
+
+GevInterfaceMACAddress
+	description  =  "48-bit MAC address of this interface."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  127703686241905
+	min  =  -9223372036854775808
+	max  =  9223372036854775807
+	inc  =  1
+	unit  = ""
+
+GevInterfaceSubnetIPAddress
+	description  =  "IP address of the selected subnet of this interface."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  2887415901
+	min  =  -9223372036854775808
+	max  =  9223372036854775807
+	inc  =  1
+	unit  = ""
+
+GevInterfaceSubnetMask
+	description  =  "Subnet mask of the selected subnet of this interface."
+	type  =  <2: 2>
+	access_mode  =  <3: 3>
+	value  =  4294967040
+	min  =  -9223372036854775808
+	max  =  9223372036854775807
+	inc  =  1
+	unit  = ""
+
+GevInterfaceSubnetSelector
+	description  =  "Selector for the subnet of this interface."
+	type  =  <2: 2>
+	access_mode  =  <1: 1>
+	value  =  N/A
+	min  =  N/A
+	max  =  N/A
+	inc  =  N/A
+	unit  = ""
+
+InterfaceDeviceAccessStatus
+	description  =  "Gives the device's access status at the moment of the last execution of "DeviceUpdateList". This value only changes on execution of "DeviceUpdateList"."
+	type  =  <9: 9>
+	access_mode  =  <1: 1>
+	value  =  N/A
+	enumentries  =  N/A
+
+InterfaceDisplayName
+	description  =  "User readable name of the selected interface."
+	type  =  <6: 6>
+	access_mode  =  <3: 3>
+	value  =  "GigE Interface ( MAC:742554dade71 )"
+
+InterfaceID
+	description  =  "GenTL Producer wide unique identifier of the selected interface."
+	type  =  <6: 6>
+	access_mode  =  <3: 3>
+	value  =  "742554dade71"
+
+InterfaceInformation
+	description  =  "Category that contains all Interface Information features of the Interface module."
+	type  =  <8: 8>
+	access_mode  =  <3: 3>
+	number of features  =  9
+
+InterfaceType
+	description  =  "Transport layer type of the interface."
+	type  =  <9: 9>
+	access_mode  =  <3: 3>
+	value  =  GigEVision
+	enumentries  =  [GigEVision, CameraLink, CameraLinkHS, CoaXPress, USB3Vision, Custom]
+
+Root
+	description  =  ""
+	type  =  <8: 8>
+	access_mode  =  <3: 3>
+	number of features  =  2
